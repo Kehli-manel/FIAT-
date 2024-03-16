@@ -1,0 +1,236 @@
+$fontColor: rgb(44, 44, 44);
+$font-familly: 'Ubuntu', sans-serif;
+$break-point-small: 768px;
+$orange: orangered;
+$header-footer-color: rgba(255, 168, 6, 0.199);
+
+body {
+    margin: 0;
+    font-family: $font-familly;
+    color: $fontColor;
+}
+
+nav {
+    background-color: $header-footer-color;
+    display: grid;
+    grid-template-columns: 0.1fr 1fr 1fr;
+
+    .logo {
+        padding: 10px 10px 10px 30px;
+        cursor: pointer;
+    }
+
+    ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        list-style: none;
+        gap: 20px;
+
+        li {
+            font-size: 20px;
+            font-weight: 600;
+
+            a {
+                text-decoration: none;
+                color: $fontColor;
+                transition: 300ms;
+            }
+
+            a:hover {
+                color: $orange;
+            }
+        }
+
+        .close-btn {
+            display: none;
+
+        }
+
+    }
+
+    .search {
+        padding-right: 30px;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        gap: 20px;
+
+        .search-btn {
+            width: 25px;
+            cursor: pointer;
+        }
+
+        input {
+            height: 25px;
+            width: 150px;
+            border-radius: 50px;
+            border-color: $orange;
+            color: $orange;
+            font-size: 16px;
+            font-weight: 500;
+            padding: 2px 10px;
+        }
+
+        .menu {
+            background-color: transparent;
+            border: none;
+            display: none;
+        }
+    }
+}
+
+body.show {
+    .menu-bar {
+        display: flex;
+        flex-direction: column;
+        padding: 100px;
+        margin: auto;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        overflow: auto;
+        width: auto;
+        background-color: rgb(252, 174, 79);
+
+        .close-btn {
+            display: block;
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+
+        }
+    }
+}
+
+
+section {
+    padding: 50px;
+
+    .item {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: center;
+
+        .details {
+            li {
+                margin-bottom: 10px;
+            }
+        }
+
+        p {
+            margin-left: 20px;
+        }
+
+        h3 {
+            color: $orange;
+        }
+    }
+
+    form {
+        margin-top: 50px;
+        margin-left: 50px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        width: 30%;
+
+        div {
+            display: flex;
+            justify-content: space-between;
+
+            input {
+                color: $fontColor;
+                border-color: $orange;
+                border-radius: 50px;
+                height: 25px;
+                width: 200px;
+            }
+        }
+    }
+
+    button {
+        cursor: pointer;
+        margin: 30px 15%;
+        font-size: 16px;
+        padding: 15px;
+        border-radius: 20px;
+        background-color: $orange;
+        border: none;
+        transition: 300ms;
+    }
+
+    button:hover {
+        transform: scale(1.05);
+    }
+}
+
+
+footer {
+    background-color: $header-footer-color;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 30px;
+
+    .info {
+        display: flex;
+        justify-content: flex-end;
+        gap: 20px;
+
+        div {
+            display: flex;
+            gap: 5px;
+        }
+    }
+}
+
+@media (max-width: $break-point-small) {
+    nav {
+        display: flex;
+        justify-content: space-between;
+
+        ul {
+            display: none;
+        }
+
+        .search {
+            .menu {
+                display: block;
+                cursor: pointer;
+            }
+        }
+    }
+
+    .item {
+        img {
+            width: 400px;
+        }
+    }
+
+    form {
+        width: 90%;
+        margin: auto;
+    }
+
+    footer {
+        .info {
+            svg {
+                width: 10px;
+            }
+
+            flex-direction: column;
+            gap: 0px;
+
+            p {
+                font-size: 10px;
+            }
+        }
+    }
+
+}

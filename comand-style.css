@@ -1,0 +1,185 @@
+body {
+  margin: 0;
+  font-family: "Ubuntu", sans-serif;
+  color: rgb(44, 44, 44);
+}
+
+nav {
+  background-color: rgba(255, 168, 6, 0.199);
+  display: grid;
+  grid-template-columns: 0.1fr 1fr 1fr;
+}
+nav .logo {
+  padding: 10px 10px 10px 30px;
+  cursor: pointer;
+}
+nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  gap: 20px;
+}
+nav ul li {
+  font-size: 20px;
+  font-weight: 600;
+}
+nav ul li a {
+  text-decoration: none;
+  color: rgb(44, 44, 44);
+  transition: 300ms;
+}
+nav ul li a:hover {
+  color: orangered;
+}
+nav ul .close-btn {
+  display: none;
+}
+nav .search {
+  padding-right: 30px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 20px;
+}
+nav .search .search-btn {
+  width: 25px;
+  cursor: pointer;
+}
+nav .search input {
+  height: 25px;
+  width: 150px;
+  border-radius: 50px;
+  border-color: orangered;
+  color: orangered;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 2px 10px;
+}
+nav .search .menu {
+  background-color: transparent;
+  border: none;
+  display: none;
+}
+
+body.show .menu-bar {
+  display: flex;
+  flex-direction: column;
+  padding: 100px;
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  overflow: auto;
+  width: auto;
+  background-color: rgb(252, 174, 79);
+}
+body.show .menu-bar .close-btn {
+  display: block;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+section {
+  padding: 50px;
+}
+section .item {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+section .item .details li {
+  margin-bottom: 10px;
+}
+section .item p {
+  margin-left: 20px;
+}
+section .item h3 {
+  color: orangered;
+}
+section form {
+  margin-top: 50px;
+  margin-left: 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 30%;
+}
+section form div {
+  display: flex;
+  justify-content: space-between;
+}
+section form div input {
+  color: rgb(44, 44, 44);
+  border-color: orangered;
+  border-radius: 50px;
+  height: 25px;
+  width: 200px;
+}
+section button {
+  cursor: pointer;
+  margin: 30px 15%;
+  font-size: 16px;
+  padding: 15px;
+  border-radius: 20px;
+  background-color: orangered;
+  border: none;
+  transition: 300ms;
+}
+section button:hover {
+  transform: scale(1.05);
+}
+
+footer {
+  background-color: rgba(255, 168, 6, 0.199);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 30px;
+}
+footer .info {
+  display: flex;
+  justify-content: flex-end;
+  gap: 20px;
+}
+footer .info div {
+  display: flex;
+  gap: 5px;
+}
+
+@media (max-width: 768px) {
+  nav {
+    display: flex;
+    justify-content: space-between;
+  }
+  nav ul {
+    display: none;
+  }
+  nav .search .menu {
+    display: block;
+    cursor: pointer;
+  }
+  .item img {
+    width: 400px;
+  }
+  form {
+    width: 90%;
+    margin: auto;
+  }
+  footer .info {
+    flex-direction: column;
+    gap: 0px;
+  }
+  footer .info svg {
+    width: 10px;
+  }
+  footer .info p {
+    font-size: 10px;
+  }
+}/*# sourceMappingURL=comand-style.css.map */

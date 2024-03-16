@@ -1,0 +1,223 @@
+body {
+  margin: 0;
+  font-family: "Ubuntu", sans-serif;
+  color: rgb(44, 44, 44);
+}
+
+nav {
+  background-color: rgba(255, 168, 6, 0.199);
+  display: grid;
+  grid-template-columns: 0.1fr 1fr 1fr;
+}
+nav .logo {
+  padding: 10px 10px 10px 30px;
+  cursor: pointer;
+}
+nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  gap: 20px;
+}
+nav ul li {
+  font-size: 20px;
+  font-weight: 600;
+}
+nav ul li a {
+  text-decoration: none;
+  color: rgb(44, 44, 44);
+  transition: 300ms;
+}
+nav ul li a:hover {
+  color: orangered;
+}
+nav ul .close-btn {
+  display: none;
+}
+nav .search {
+  padding-right: 30px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 20px;
+}
+nav .search .search-btn {
+  width: 25px;
+  cursor: pointer;
+}
+nav .search input {
+  height: 25px;
+  width: 150px;
+  border-radius: 50px;
+  border-color: orangered;
+  color: orangered;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 2px 10px;
+}
+nav .search .menu {
+  background-color: transparent;
+  border: none;
+  display: none;
+}
+
+body.show ul {
+  display: flex;
+  flex-direction: column;
+  padding: 100px;
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  overflow: auto;
+  width: auto;
+  background-color: rgb(252, 174, 79);
+}
+body.show ul .close-btn {
+  display: block;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.intro {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 80px;
+  gap: 40px;
+  text-align: center;
+}
+.intro h1 {
+  color: orangered;
+}
+.intro img {
+  border-radius: 50%;
+}
+
+.section1 {
+  padding: 50px 20px;
+}
+.section1 h1 {
+  padding-left: 30px;
+  margin-bottom: 80px;
+}
+.section1 .catalogue {
+  box-shadow: 0px 0px 16px 0px rgba(0, 0, 0, 0.75);
+  padding: 50px;
+  border-radius: 12px;
+  display: flex;
+  gap: 50px;
+  overflow-x: auto;
+  white-space: nowrap;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.section1 .catalogue .item {
+  position: relative;
+}
+.section1 .catalogue .item img {
+  width: 200px;
+  border-radius: 20px;
+}
+.section1 .catalogue .item h3 {
+  color: #fff;
+  position: absolute;
+  top: 50px;
+  left: 20px;
+}
+.section1 .catalogue .item p,
+.section1 .catalogue .item h4 {
+  margin-left: 15px;
+}
+.section1 .catalogue .item button {
+  margin-left: 25%;
+  background-color: rgba(255, 168, 6, 0.199);
+  padding: 15px;
+  border-radius: 50px;
+  border: none;
+  cursor: pointer;
+  transition: 300ms;
+}
+.section1 .catalogue .item button a {
+  color: black;
+  text-decoration: none;
+  font-weight: 900;
+}
+.section1 .catalogue .item button:hover {
+  transform: scale(1.1);
+}
+.section1 .catalogue .item button:hover a {
+  color: orangered;
+}
+.section1 .catalogue::-webkit-scrollbar {
+  width: 0;
+}
+
+.contact {
+  padding: 50px;
+}
+.contact h1 {
+  margin-bottom: 80px;
+}
+.contact .contact-info {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.contact .contact-info .cnt {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.contact .contact-info .cnt div {
+  display: flex;
+  gap: 10px;
+}
+
+footer {
+  background-color: rgba(255, 168, 6, 0.199);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 30px;
+}
+footer .info {
+  display: flex;
+  justify-content: flex-end;
+  gap: 20px;
+}
+footer .info div {
+  display: flex;
+  gap: 5px;
+}
+
+@media (max-width: 768px) {
+  nav {
+    display: flex;
+    justify-content: space-between;
+  }
+  nav ul {
+    display: none;
+  }
+  nav .search .menu {
+    display: block;
+    cursor: pointer;
+  }
+  footer .info {
+    flex-direction: column;
+    gap: 0px;
+  }
+  footer .info svg {
+    width: 10px;
+  }
+  footer .info p {
+    font-size: 10px;
+  }
+}/*# sourceMappingURL=style.css.map */
